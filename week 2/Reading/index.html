@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 2 - HTML, CSS, JavaScript Introduction</title>
+
+  <!-- External CSS: linking to an external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Website</h1>
+    <p class="subtitle">Week 2 Reading: HTML, CSS &amp; JavaScript</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. HTML: the skeleton</h2>
+      <p>HTML structures content on a webpage using tags such as headings, paragraphs, lists, links, and images.</p>
+      <ul>
+        <li><code>&lt;html&gt;</code> wraps the entire page</li>
+        <li><code>&lt;head&gt;</code> holds metadata like the title and linked CSS</li>
+        <li><code>&lt;body&gt;</code> holds the visible content</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. CSS: the look and feel</h2>
+      <!-- Inline CSS: applied directly to the element -->
+      <p style="color: red; font-weight: bold;">This paragraph uses inline CSS.</p>
+      <p>This paragraph is styled by the external <code>style.css</code> file, keeping structure (HTML) separate from style (CSS).</p>
+    </section>
+
+    <section>
+      <h2>3. JavaScript: interactivity</h2>
+      <p>Click the button to change the heading color. Open the Console (Ctrl + Shift + J / Cmd + Option + J) to see the log message.</p>
+      <button id="colorButton">Change heading color</button>
+    </section>
+
+    <section>
+      <h2>4. DevTools exercise</h2>
+      <p>Right-click the heading above, choose <strong>Inspect</strong>, and add <code>color: red;</code> under <code>element.style</code> to see the change in real time.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Visualization 4 &middot; Week 2</p>
+  </footer>
+
+  <!-- Script placed just before </body> so it runs after the page has loaded -->
+  <script>
+    document
+      .getElementById("colorButton")
+      .addEventListener("click", function () {
+        document
+          .querySelector("h1")
+          .style
+          .color = "green";
+        console.log("Button clicked!");
+      });
+  </script>
+</body>
+</html>
